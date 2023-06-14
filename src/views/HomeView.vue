@@ -132,7 +132,7 @@ export default {
             <input type="date" class="form-control" id="dateFrom" name="date" v-model="startDate">
             <label for="dateFrom">結束時間</label>
             <input type="date" class="form-control" id="dateUtil" name="date" v-model="endDate">
-            <span v-if="endDate < startDate" class="error-message">結束時間錯誤</span> 
+            <span v-if="endDate < startDate" class="error-message">時間錯誤</span>
         </div>
 
     </div>
@@ -160,7 +160,7 @@ export default {
                 <td>{{ item.state }}</td>
                 <td>{{ item.startDay }}</td>
                 <td>{{ item.endDay }}</td>
-                <td><RouterLink to="/statistics">前往</RouterLink></td>
+                <td><RouterLink :to="'/statistics/' + item.formId">前往</RouterLink></td>
                 </tr>
             </tbody>
             </table>

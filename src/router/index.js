@@ -23,7 +23,7 @@ const router = createRouter({
       component: DoubleCheck
     },
     {
-      path: '/statistics',
+      path: '/statistics/:formId',
       name: 'statistics',
       component: Statistics
     }
